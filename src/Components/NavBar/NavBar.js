@@ -1,23 +1,18 @@
-import './NavBar.css'
+import {Link} from 'react-router-dom'
 
-
-export const NavBar = ({ nav }) => {
+export const NavBar = () => {
 
     return (
-       <header className="header">
+        <header className="header">
+            <Link to='' style={{color: '#FFF'}}>
+                <h1>DecoDega</h1>
+            </Link>
 
-        <h1>
-           DecoDega
-        </h1>
-
-        <nav className="header-nav">
-            <p className="link">Hogar </p>
-            <p className="link">Comercio </p>
-            <p className="link">Arte </p>
-        </nav>
-
-
-       </header>
-        
+            <nav className="header-nav">
+                <Link to='' className='header-link'>Hogar</Link>
+                <Link to='' className='header-link'>Comercio</Link>
+                <Link to='' className='header-link'>Contacto</Link>
+            </nav>
+        </header>
     )
-};
+}
