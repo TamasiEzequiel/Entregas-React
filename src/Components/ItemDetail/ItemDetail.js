@@ -1,4 +1,4 @@
-
+//detalle de producto para filtrar luego al entrar al prod
 
 
 export const ItemDetail = ({id, nombre, img, desc, precio, stock, categoria}) => {

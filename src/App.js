@@ -16,15 +16,16 @@ function App() {
             <Route path="/" element={ <ItemListContainer/> }/>
             <Route path='/productos/:catId' element={ <ItemListContainer/> }/>
             <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }/>
-            
-
-            {/* <Route path='/404' element={ <Error404/> }/> */}
             <Route path='*' element={ <Navigate to='/'/> }/>
           </Routes>
 
-          {/* <Footer/> */}
+          
         </BrowserRouter>
     )
 }
 
 export default App;
+
+//en el PATH defino pasando un paramtero
+// despues con el link le indico la url donde ir
+// en el "ItemListContainer"  capturo ese parametro con el "usaeParams"

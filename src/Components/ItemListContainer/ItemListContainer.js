@@ -9,9 +9,11 @@ export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(false)
 
-    const { catId } = useParams()
 
-    console.log(catId)
+    //hook q retorna objetos con los param de la url, defino la estrucutra con parametros
+    const { catId } = useParams()
+   
+    //condiciono a q muestre la 'categoria' q esta en la pagina
 
     useEffect( () => {
         setLoading(true)

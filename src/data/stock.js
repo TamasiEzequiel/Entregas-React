@@ -8,7 +8,7 @@ export const stock = [
         precio: 1000,
         img: 'https://via.placeholder.com/150',
         stock: 10,
-        categoria: 'deco'
+        categoria: 'hogar'
     },
     {
         nombre: 'Producto 2',
@@ -17,7 +17,7 @@ export const stock = [
         precio: 750,
         img: 'https://via.placeholder.com/150',
         stock: 10,
-        categoria: 'deco'
+        categoria: 'hogar'
     },
     {
         nombre: 'Producto 3',
@@ -26,7 +26,7 @@ export const stock = [
         precio: 300,
         img: 'https://via.placeholder.com/150',
         stock: 10,
-        categoria: 'deco'
+        categoria: 'hogar'
     },
     {
         nombre: 'Producto 4',
@@ -35,7 +35,7 @@ export const stock = [
         precio: 400,
         img: 'https://via.placeholder.com/150',
         stock: 5,
-        categoria: 'deco'
+        categoria: 'comercio'
     },
     {
         nombre: 'Producto 5',
@@ -44,6 +44,6 @@ export const stock = [
         precio: 1500,
         img: 'https://via.placeholder.com/150',
         stock: 20,
-        categoria: 'deco'
+        categoria: 'comercio'
     },
 ]
