@@ -4,11 +4,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.scss'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import { CartProvider } from './components/context/CartContext'
+import { useState } from "react";
+import { Item } from "./components/Item/Item";
+import { Cart } from "./components/Cart/Cart";
+
 
 function App() {
 
+
     return (
-        <BrowserRouter>
+
+      <CartProvider>
+         <BrowserRouter>
 
           <NavBar/>
           
@@ -17,10 +25,14 @@ function App() {
             <Route path='/productos/:catId' element={ <ItemListContainer/> }/>
             <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }/>
             <Route path='*' element={ <Navigate to='/'/> }/>
+
+            <Route path= '/cart' element={<Cart/>}/>
+
           </Routes>
 
           
         </BrowserRouter>
+        </CartProvider>
     )
 }
 
