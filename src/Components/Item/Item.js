@@ -1,18 +1,26 @@
 import { Button, Card } from "react-bootstrap"
 import { Link } from 'react-router-dom'
 
-export const Item = ( {id, nombre, precio, img, desc} ) => {
+export const Item = ( {id, nombre, precio, img, desc, oferta} ) => {
+
+    const precioFinal = oferta ? precio * 0.85 : precio
 
     return (
-        <Card style={{ width: '12rem', margin: '10px' }}>
+        <Card style={{ width: '12rem', margin: '12px' }}>
             <Card.Img variant="top" src={img} />
             <Card.Body>
                 <Card.Title>{nombre}</Card.Title>
                 <Card.Text>
                     {desc}
                 </Card.Text>
+                { oferta &&
+                    <>
+                        <Card.Title>5% OFF</Card.Title>
+                        <Card.Text>Fre shipping</Card.Text>
+                    </>
+                }
                 <Card.Text>
-                    Precio: ${precio}
+                    Precio: ${precioFinal}
                 </Card.Text>
                 <Link to={`/detail/${id}`}>
                     <Button variant="primary">Ver más</Button>

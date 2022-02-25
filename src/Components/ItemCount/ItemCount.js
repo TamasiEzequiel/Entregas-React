@@ -1,3 +1,4 @@
+import { configBtns } from "./configBtns"
 
 //FUNCION DE CONTADOR
 
@@ -10,28 +11,44 @@ export const ItemCount = ({max, min = 0, counter,setCounter}) => {
 
 
     const handleSumar = (e) => {
-        //para frenar la propagacino del click
-        e.stopPropagation()
+        
         counter < max && setCounter(counter + 1)
     }
 
-    const handleRestar = (e) => {
-        e.stopPropagation()
+    const handleRestar = () => {
         counter > min && setCounter(counter - 1)
     }
 
+    const {configRestar, configSumar} = configBtns(counter, max, min, handleRestar, handleSumar)
+
+
     return (
-
         <div>
-            <button className="btn btn- outline-primary" onClick={handleRestar}>-</button>
+            <button {...configRestar}>
+                -
+            </button>
             <span className="mx-3">{counter}</span>
-            <button className="btn btn-primary"  onClick={handleSumar}>+</button>
+            <button {...configSumar}>
+                +
+            </button>
         </div>
-
     )
-
 }
+
+
+
+
 
 // agrego el contador al ItemDetail 
 //declaro de un evento: declaro la funcion y luego paso la referencia al atributo q quiero, utilizo el atributo handle
 // PASAR LA REFERENCIA{handleClick}, NO LA FUNCION {handleClick()}
+
+
+
+
+   
+
+  
+
+
+ 

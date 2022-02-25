@@ -1,4 +1,5 @@
-import { Contenedor } from "../../Contenedor/Contenedor.js"
+import { useEffect } from "react"
+import { Contenedor } from "../../Contenedor/Contenedor"
 import { Item } from "../Item/Item"
 
 
