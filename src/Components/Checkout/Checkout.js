@@ -86,11 +86,7 @@ export const Checkout = () => {
             return
         }
         
-        if (values.nombre.length < 8){
-            alert ("Por favor coloque un numero valido")
-            return
-        }
-  
+      
         generarOrden()        
 
     }
